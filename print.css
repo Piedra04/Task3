@@ -1,0 +1,81 @@
+:root {
+    --font: "Droid Serif", serif;
+    --font-title: "Playfair Display", serif;
+    --font-sans-serif: "Manrope", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.1rem;
+    font-family: var(--font);
+    background-color: lightgray;
+}
+
+.head1 {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    margin: 0% 2%;
+}
+
+.weather {
+    display: none;
+}
+
+body .head1 p {
+    border-bottom: 2px solid black;
+    align-content: center;
+}
+
+body .head1 p:first-child {
+    font-size: 1.5em;
+    width: 100%;
+    height: 10vh;
+}
+
+body .head1 p:last-child {
+    font-size: 0.8em;
+    height: 4vh;
+}
+
+/*Titulos noticias*/
+.column .head {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column .head span:first-child {
+    font-size: 2em;
+    width: 100%;
+    font-family: var(--font-title);
+}
+
+.column .head span:last-child {
+    width: 100%;
+}
+
+/*Imagenes*/
+figure img,
+figure figcaption  {
+    display: none;
+}
+
+/*Columnas*/
+.column{
+    margin-top: 20px;
+}
+
+.column p {
+    margin-top: 10px;
+}

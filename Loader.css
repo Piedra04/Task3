@@ -1,0 +1,64 @@
+body {
+    background: rgb(0 28 47);
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4.5vw;
+}
+
+p {
+    font-size: 2.8vw;
+}
+
+/*Circulo de progreso*/
+.loader {
+    margin: auto;
+    margin-top: 5%;
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    animation: l14 4s infinite;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    border: 8px solid;
+    border-radius: 50%;
+    border-color: red red #0000 #0000;
+    mix-blend-mode: darken;
+    animation: l14 1s infinite linear;
+}
+
+.loader::after {
+    border-color: #0000 #0000 blue blue;
+    animation-direction: reverse;
+}
+
+@keyframes l14 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+/*Barra de progeso*/
+.progress-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ddd;
+    height: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: auto
+}
+
+.progress-bar {
+    height: 24px;
+    width: 20%;
+    background-color: #4caf50;
+    transition: width 0.1s linear;
+    align-self: center;
+}
